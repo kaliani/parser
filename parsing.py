@@ -22,8 +22,10 @@ def main():
 
     all_links = get_all_links(get_html(url))
 
+    mylinks = open('mylinks.txt','w')
     for i in all_links:
-        print i
+        mylinks.write(i+'\n')
+    mylinks.close()
     #print(len(all_links))    
         
 
